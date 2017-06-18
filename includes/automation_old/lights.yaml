@@ -1,0 +1,71 @@
+############################################################
+#
+# Home Assistant Lights
+#
+############################################################
+#
+#- alias: Turn on all lights 15 minutes before sunset
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "-00:15:00"
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: group.all_lights
+#
+#- alias: Turn on all switches 10 minutes after sunset
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "+00:10:00"
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: group.all_switches
+#
+#- alias: Turn off all lights at 23:00
+#  trigger:
+#    platform: time
+#    after: "23:00:00"
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: group.all_lights
+#
+#- alias: Turn off all switches at 23:30
+#  trigger:
+#    platform: time
+#    after: "23:30:00"
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: group.all_switches
+#
+#- alias: Turn on all lights
+#  trigger:
+#    platform: time
+#    after: '19:15:00'
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: group.all_lights
+#
+#- alias: Turn on all switches
+#  trigger:
+#    platform: time
+#    after: '19:30:00'
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id: group.all_switches
+#
+#- alias: Turn off all lights
+#  trigger:
+#    platform: time
+#    after: '02:00:00'
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: group.all_lights
+#
+#- alias: Turn off all switches
+#  trigger:
+#    platform: time
+#    after: '23:45:00'
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: group.all_switches

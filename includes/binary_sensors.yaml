@@ -1,0 +1,10 @@
+############################################################
+#
+# Home Assistant Binary Sensors
+#
+############################################################
+
+- platform: octoprint
+  monitored_conditions:
+    - Printing
+    - Printing Error

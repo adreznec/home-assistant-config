@@ -1,0 +1,19 @@
+############################################################
+#
+# Home Assistant Z-Wave Management
+#
+############################################################
+#
+# - alias: soft reset at 2:30am
+#   trigger:
+#     platform: time
+#     after: '2:30:00'
+#   action:
+#     service: zwave.soft_reset
+#
+#- alias: Heal at 11:30am
+#  trigger:
+#    platform: time
+#    after: '11:30:00'
+# action:
+#    service: zwave.heal_network

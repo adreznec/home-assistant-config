@@ -1,0 +1,131 @@
+############################################################
+#
+# Home Assistant Groups
+#
+############################################################
+
+irrigation:
+  name: Rachio
+  icon: mdi:water-pump
+  entities:
+    - switch.zone_1__front
+    - switch.zone_2__frontside_house
+    - switch.zone_3__street_side
+    - switch.zone_4__backyardgarden
+    - switch.zone_5__backyarddeck
+    - switch.zone_6__side_yard
+
+arlo:
+  name: Arlo
+  icon: mdi:video
+  entities:
+    - sensor.arlo_cameras
+    - sensor.captured_today_back_door
+    - sensor.captured_today_front_door
+    - sensor.last_back_door
+    - sensor.last_front_door 
+
+Speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+Sonarr:
+  name: Sonarr
+  entities:
+    - sensor.sonarr_disk_space
+    - sensor.sonarr_upcoming
+
+weather_overview:
+  name: Weather Overview
+  entities:
+    - sensor.pws_weather_1d
+    - sensor.pws_temp_high_record_f
+    - sensor.pws_temp_high_1d_f
+    - sensor.pws_temp_f
+    - sensor.pws_temp_low_1d_f
+    - sensor.pws_temp_low_record_f
+    - sensor.pws_precip_1d
+    - sensor.pws_precip_1d_in
+    - sensor.pws_wind_mph
+    - sensor.pws_wind_1d_mph
+    - sensor.pws_alerts
+
+Nest:
+  name: Nest Thermostat
+  entities:
+    - climate.weatherlight
+    - sensor.weatherlight_thermostat_operation_mode
+    - sensor.weatherlight_thermostat_target
+    - sensor.weatherlight_thermostat_humidity
+    - binary_sensor.weatherlight_thermostat_fan
+
+Octoprint:
+  name: Octoprint
+  entities:
+    - camera.octocam
+    - sensor.octoprint_current_state
+    - binary_sensor.octoprint_printing
+    - binary_sensor.octoprint_printing_error
+    - sensor.octoprint_job_percentage
+    - sensor.octoprint_target_bed_temp
+    - sensor.octoprint_actual_bed_temp
+    - sensor.octoprint_target_tool0_temp
+    - sensor.octoprint_actual_tool0_temp
+
+# z-wave
+
+Multisensor:
+  name: Aeotec Multisensor
+  entities:
+    - binary_sensor.aeotec_zw100_multisensor_6_sensor_9_0  
+    - sensor.aeotec_zw100_multisensor_6_temperature_9_1
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5
+    - sensor.aeotec_zw100_multisensor_6_luminance_9_3
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27
+    - sensor.aeotec_zw100_multisensor_6_burglar_9_10
+
+Doors:
+  name: Door States
+  entities:
+    - binary_sensor.ecolink_garage_door_tilt_sensor_sensor_11_0
+    - binary_sensor.ecolink_doorwindow_sensor_sensor_10_0
+
+Energy Switch:
+  name: Energy Switch
+  entities:
+    - sensor.aeotec_dsc06106_smart_energy_switch_energy_4_0
+    - sensor.aeotec_dsc06106_smart_energy_switch_power_4_4
+    - sensor.aeotec_dsc06106_smart_energy_switch_previous_reading_4_1
+
+Mini Plug 1:
+  name: Printer Lamp
+  entities:
+    - switch.__switch_12_0
+    - sensor.zooz_zen07_mini_plug_current_12_20
+    - sensor.zooz_zen07_mini_plug_energy_12_0
+    - sensor.zooz_zen07_mini_plug_power_12_8
+    - sensor.zooz_zen07_mini_plug_previous_reading_12_1
+    - sensor.zooz_zen07_mini_plug_previous_reading_12_17
+    - sensor.zooz_zen07_mini_plug_previous_reading_12_21
+    - sensor.zooz_zen07_mini_plug_previous_reading_12_9
+    - sensor.zooz_zen07_mini_plug_voltage_12_16
+
+Mini Plug 2:
+  name: Family Room Lamp
+  entities:
+    - switch.__switch_13_0
+    - sensor.zooz_zen07_mini_plug_current_13_20
+    - sensor.zooz_zen07_mini_plug_energy_13_0
+    - sensor.zooz_zen07_mini_plug_power_13_8
+    - sensor.zooz_zen07_mini_plug_previous_reading_13_1
+    - sensor.zooz_zen07_mini_plug_previous_reading_13_17
+    - sensor.zooz_zen07_mini_plug_previous_reading_13_21
+    - sensor.zooz_zen07_mini_plug_previous_reading_13_9
+    - sensor.zooz_zen07_mini_plug_voltage_13_16
+
+# TODO: Add support for
+# Steam - https://home-assistant.io/components/sensor.steam_online/
+# Xbox - https://home-assistant.io/components/sensor.xbox_live/

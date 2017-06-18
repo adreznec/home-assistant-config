@@ -1,0 +1,71 @@
+- id: low_temp_alert
+  alias: 'Alert on Low temperature'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.aeotec_zw100_multisensor_6_temperature_9_1
+      below: 55.0
+  action:
+    - service: notify.rezslack
+      data_template:
+         title: 'Temperature Low'
+         message: >
+           Temperature at: {{ states('sensor.aeotec_zw100_multisensor_6_temperature_9_1') }} degrees
+
+- id: front_door_open
+  alias: ZWave Front Door Sensor Open
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.ecolink_doorwindow_sensor_sensor_10_0
+      from: 'off'
+      to: 'on'
+  action:
+    - service: notify.rezslack
+      data_template:
+         title: 'Door opened'
+         message: >
+           Front door opened
+
+- id: update_notify
+  alias: HA update notification
+  trigger:
+    - platform: state
+      entity_id: updater.updater
+  action:
+    - service: notify.rezslack
+      data:
+        message: 'There is a new Home Assistant release available.'
+
+- id: multisensor_motion
+  alias: ZWave Motion Sensor Activated
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.aeotec_zw100_multisensor_6_burglar_9_10
+      above: 0
+  action:
+    - service: notify.rezslack
+      data_template:
+        title: 'Motion detected'
+        message: >
+          Motion detected in living area
+
+- id: garage_door_open
+  alias: Garage Door Open
+  condition:
+    condition: or
+    conditions:
+     - condition: time
+       before: "06:00"
+     - condition: time
+       after: "18:00"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.ecolink_garage_door_tilt_sensor_sensor_11_0
+      from: 'off'
+      to: 'on'
+      for:
+        minutes: 15
+  action:
+    - service: notify.rezslack
+      data:
+        title: "Garage Door Open"
+        message: The Garage Door is Open - Please close if needed.

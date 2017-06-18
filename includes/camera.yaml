@@ -1,0 +1,13 @@
+############################################################
+#
+# Home Assistant Camera Controls
+#
+############################################################
+
+- platform: mjpeg
+  mjpeg_url: !secret octoprint_camera_url
+  name: Octocam 
+
+- platform: arlo
+  ffmpeg_arguments: '-pred 1 -q:v 2'
+  name: Arlo

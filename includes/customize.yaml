@@ -1,0 +1,246 @@
+############################################################
+#
+# Home Assistant Customization
+#
+############################################################
+
+# Speedtest
+sensor.speedtest_ping:
+  icon: mdi:speedometer
+  friendly_name: Ping
+sensor.speedtest_download:
+  icon: mdi:download
+  friendly_name: Download
+sensor.speedtest_upload:
+  icon: mdi:upload
+  friendly_name: Upload
+ 
+# Nest
+sensor.weatherlight_thermostat_operation_mode:
+  friendly_name: Nest Mode
+sensor.weatherlight_thermostat_target:
+  friendly_name: Nest Target
+sensor.weatherlight_thermostat_temperature:
+  hidden: true
+sensor.weatherlight_thermostat_humidity:
+  friendly_name: Nest Humidity
+binary_sensor.weatherlight_thermostat_fan:
+  friendly_name: Nest Fan
+binary_sensor.weatherlight_thermostat_has_leaf:
+  hidden: true
+binary_sensor.weatherlight_thermostat_is_locked:
+  hidden: true
+binary_sensor.weatherlight_thermostat_is_using_emergency_heat:
+  hidden: true
+sensor.weatherlight_thermostat_hvac_state:
+  hidden: true
+binary_sensor.weatherlight_thermostat_online:
+  hidden: true
+
+############################################################
+# Z-Wave Sensors
+############################################################
+
+# Multisensor
+sensor.aeotec_zw100_multisensor_6_temperature_9_1:
+  friendly_name: Temperature
+sensor.aeotec_zw100_multisensor_6_relative_humidity_9_5:
+  friendly_name: Humidity
+  icon: mdi:water
+sensor.aeotec_zw100_multisensor_6_luminance_9_3:
+  friendly_name: Luminance
+  icon: mdi:weather-sunny
+sensor.aeotec_zw100_multisensor_6_ultraviolet_9_27:
+  friendly_name: Ultraviolet
+  icon: mdi:sunglasses
+binary_sensor.aeotec_zw100_multisensor_6_sensor_9_0:
+  friendly_name: Sensor
+sensor.aeotec_zw100_multisensor_6_alarm_level_9_1:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_alarm_type_9_0:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_sourcenodeid_9_2: 
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_burglar_9_10:
+  friendly_name: Motion sensor
+  icon: mdi:run
+
+# Energy Switch
+switch.aeotec_dsc06106_smart_energy_switch_switch_4_0:
+  friendly_name: 3D Printer
+sensor.aeotec_dsc06106_smart_energy_switch_energy_4_0:
+  friendly_name: Energy
+sensor.aeotec_dsc06106_smart_energy_switch_power_4_4:
+  friendly_name: Power
+sensor.aeotec_dsc06106_smart_energy_switch_previous_reading_4_1:
+  friendly_name: Previous Reading
+sensor.aeotec_dsc06106_smart_energy_switch_interval_4_10:
+  hidden: true
+sensor.aeotec_dsc06106_smart_energy_switch_interval_4_2:
+  hidden: true
+sensor.aeotec_dsc06106_smart_energy_switch_power_4_8:
+  hidden: true
+sensor.aeotec_dsc06106_smart_energy_switch_previous_reading_4_9:
+  hidden: true
+sensor.aeotec_dsc06106_smart_energy_switch_exporting_4_32:
+  hidden: true
+
+# Bedroom Bulbs
+light.linear_lb60z1_dimmable_led_light_bulb_level_2_0 :
+  friendly_name: Adam's Lamp
+  emulated_hue_name: "bedroom light"
+
+# Office Bulbs
+light.linear_lb60z1_dimmable_led_light_bulb_level_5_0:
+  friendly_name: Office Lamp
+  emulated_hue_name: "office light"
+
+# Garage Door Tilt Sensor
+binary_sensor.ecolink_garage_door_tilt_sensor_sensor_11_0:
+  friendly_name: Garage Door
+sensor.ecolink_garage_door_tilt_sensor_access_control_11_9:
+  hidden: true
+sensor.ecolink_garage_door_tilt_sensor_alarm_level_11_1:
+  hidden: true
+sensor.ecolink_garage_door_tilt_sensor_alarm_type_11_0:
+  hidden: true
+sensor.ecolink_garage_door_tilt_sensor_burglar_11_10:
+  hidden: true
+sensor.ecolink_garage_door_tilt_sensor_power_management_11_11:
+  hidden: true
+sensor.ecolink_garage_door_tilt_sensor_sourcenodeid_11_2:
+  hidden: true
+
+# Front Door Sensor
+binary_sensor.ecolink_doorwindow_sensor_sensor_10_0:
+  friendly_name: Front Door
+sensor.ecolink_doorwindow_sensor_alarm_level_10_1:
+  hidden: true
+sensor.ecolink_doorwindow_sensor_alarm_type_10_0:
+  hidden: true
+sensor.ecolink_doorwindow_sensor_burglar_10_10:
+  hidden: true
+sensor.ecolink_doorwindow_sensor_sourcenodeid_10_2:
+  hidden: true
+
+# Zooz Plug 1
+switch.zooz_zen07_mini_plug_switch_12_0:
+  friendly_name: Printer Lamp
+  emulated_hue_name: "printer lamp"
+sensor.zooz_zen07_mini_plug_alarm_level_12_1:
+  hidden: true
+sensor.zooz_zen07_mini_plug_alarm_type_12_0:
+  hidden: true
+sensor.zooz_zen07_mini_plug_current_12_20:
+  friendly_name: Current Amps
+sensor.zooz_zen07_mini_plug_energy_12_0:
+  friendly_name: Current kWh
+sensor.zooz_zen07_mini_plug_exporting_12_32:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_12_10:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_12_18:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_12_2:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_12_22:
+  hidden: true
+sensor.zooz_zen07_mini_plug_power_12_8:
+  friendly_name: Current Watts
+sensor.zooz_zen07_mini_plug_power_management_12_11:
+  hidden: true
+sensor.zooz_zen07_mini_plug_previous_reading_12_1:
+  friendly_name: Previous kWh
+sensor.zooz_zen07_mini_plug_previous_reading_12_17:
+  friendly_name: Previous Volts
+sensor.zooz_zen07_mini_plug_previous_reading_12_21:
+  friendly_name: Previous Amps
+sensor.zooz_zen07_mini_plug_previous_reading_12_9:
+  friendly_name: Previous Watts
+sensor.zooz_zen07_mini_plug_sourcenodeid_12_2:
+  hidden: true
+sensor.zooz_zen07_mini_plug_voltage_12_16:
+  friendly_name: Current Volts
+
+# Zooz Plug 2
+switch.zooz_zen07_mini_plug_switch_13_0:
+  friendly_name: Family Room Lamp
+  emulated_hue_name: "family room lamp"
+sensor.zooz_zen07_mini_plug_alarm_level_13_1:
+  hidden: true
+sensor.zooz_zen07_mini_plug_alarm_type_13_0:
+  hidden: true
+sensor.zooz_zen07_mini_plug_current_13_20:
+  friendly_name: Current Amps
+sensor.zooz_zen07_mini_plug_energy_13_0:
+  friendly_name: Current kWh
+sensor.zooz_zen07_mini_plug_exporting_13_32:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_13_10:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_13_18:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_13_2:
+  hidden: true
+sensor.zooz_zen07_mini_plug_interval_13_22:
+  hidden: true
+sensor.zooz_zen07_mini_plug_power_13_8:
+  friendly_name: Current Watts
+sensor.zooz_zen07_mini_plug_power_management_13_11:
+  hidden: true
+sensor.zooz_zen07_mini_plug_previous_reading_13_1:
+  friendly_name: Previous kWh
+sensor.zooz_zen07_mini_plug_previous_reading_13_17:
+  friendly_name: Previous Volts
+sensor.zooz_zen07_mini_plug_previous_reading_13_21:
+  friendly_name: Previous Amps
+sensor.zooz_zen07_mini_plug_previous_reading_13_9:
+  friendly_name: Previous Watts
+sensor.zooz_zen07_mini_plug_sourcenodeid_13_2:
+  hidden: true
+sensor.zooz_zen07_mini_plug_voltage_13_16:
+  friendly_name: Current Volts
+
+# Island Dimmer Switch
+light.12724_island_dimmer_switch_level_14_0:
+  refresh_value: True
+  friendly_name: Island Dimmer
+  emulated_hue_name: "island switch"
+
+# Living Room Dimmer Switch
+light.ge_12724_3way_dimmer_switch_level_15_0:
+  refresh_value: True
+  friendly_name: Living Room Dimmer
+  emulated_hue_name: "living room switch"
+
+############################################################
+# Misc
+############################################################
+
+# Forecastio
+#sensor.dark_sky_apparent_temperature:
+#  friendly_name: Apparent
+#sensor.dark_sky_precip:
+#  friendly_name: Precipitation
+#  icon: mdi:weather-rainy
+#sensor.dark_sky_precip_probability:
+#  friendly_name: Precipitation Probability
+#  icon: mdi:weather-rainy
+#sensor.dark_sky_pressure:
+#  friendly_name: Air Pressure
+#  icon: mdi:chart-line
+#sensor.dark_sky_temperature:
+#  friendly_name: Temperature
+#sensor.dark_sky_visibility:
+#  friendly_name: Visibility
+#sensor.dark_sky_wind_bearing:
+#  friendly_name: Wind Direction
+#  icon: mdi:weather-windy
+#sensor.dark_sky_wind_speed:
+#  friendly_name: Wind Speed
+#  icon: mdi:weather-windy
+
+# Sharp TV
+media_player.sharp_tv:
+  friendly_name: Sharp TV
+  emulated_hue_name: "Sharp TV"

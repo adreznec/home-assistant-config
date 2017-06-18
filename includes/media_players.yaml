@@ -1,0 +1,11 @@
+############################################################
+#
+# Home Assistant Media Players
+#
+############################################################
+
+- platform: aquostv
+  host: !secret sharp_tv_ip
+  name: Sharp TV
+  username: !secret sharp_tv_username
+  password: !secret sharp_tv_password

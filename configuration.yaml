@@ -1,0 +1,81 @@
+############################################################
+#
+# Home Assistant Main Configuration File
+#
+# Based on: https://github.com/Instagraeme/Home-Assistant-Configuration
+# Based on: https://github.com/GreenTurtwig/personal-home-automation/tree/master/Home%20Assistant
+#
+############################################################
+
+homeassistant:
+  name: Home
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: !secret homeassistant_unit_system
+  time_zone: !secret homeassistant_time_zone
+  customize: !include includes/customize.yaml
+
+# Enables the frontend
+frontend:
+sun:
+conversation:
+updater:
+history:
+logbook:
+discovery:
+config:
+tts:
+  platform: google
+
+http:
+  api_password: !secret api_password
+
+############################################################
+#
+# Components
+#
+############################################################
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+zwave:
+  usb_path: /dev/ttyACM0
+  device_config: !include includes/zwave_device_config.yaml
+
+emulated_hue:
+  type: alexa
+  listen_port: !secret emulated_hue_port
+
+octoprint:
+  host: !secret octoprint_host
+  api_key: !secret octoprint_api_key
+
+arlo:
+  username: !secret arlo_username
+  password: !secret arlo_password
+
+switch:
+  - platform: rachio
+    access_token: !secret rachio_access_token
+
+############################################################
+#
+# Includes
+#
+############################################################
+
+# Include Uniques
+automation: !include includes/automations.yaml
+binary_sensor: !include includes/binary_sensors.yaml
+camera: !include includes/camera.yaml
+climate: !include includes/climate.yaml
+device_tracker: !include includes/device_trackers.yaml
+group: !include includes/groups.yaml
+media_player: !include includes/media_players.yaml
+notify: !include includes/notify.yaml
+
+# Include Directories
+sensor: !include_dir_merge_list includes/sensors

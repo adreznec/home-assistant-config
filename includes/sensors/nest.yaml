@@ -1,0 +1,11 @@
+############################################################
+#
+# Nest Sensor
+#
+############################################################
+
+- platform: nest
+  monitored_conditions:
+    - 'operation_mode'
+    - 'temperature'
+    - 'target'

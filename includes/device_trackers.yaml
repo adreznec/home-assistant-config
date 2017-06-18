@@ -1,0 +1,13 @@
+############################################################
+#
+# Home Assistant Device Trackers
+#
+############################################################
+
+-  platform: unifi
+   host: !secret unifi_ip
+   port: !secret unifi_port
+   username: !secret unifi_username
+   password: !secret unifi_password
+   site_id: !secret unifi_site_id
+   verify_ssl: !secret unifi_ssl
